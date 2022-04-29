@@ -363,6 +363,15 @@ for key, env_cls in HARD_MODE_CLS_DICT['test'].items():
     HARD_MODE_ARGS_KWARGS['test'][key] = _hard_mode_args_kwargs(env_cls, key)
 
 ############################## V2 DICTS ##############################
+# ahmed 
+MT2_V2 = OrderedDict(
+    (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2)), )
+
+MT2_V2_ARGS_KWARGS = {
+    key: dict(args=[],
+              kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
+    for key, _ in MT2_V2.items()
+}
 
 MT10_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2),

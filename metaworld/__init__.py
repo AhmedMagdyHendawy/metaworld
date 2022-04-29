@@ -188,6 +188,17 @@ class ML45(Benchmark):
                                        _ML_OVERRIDE,
                                        seed=seed)
 
+# ahmed
+class MT2(Benchmark):
+    def __init__(self, seed=None):
+        super().__init__()
+        self._train_classes = _env_dict.MT2_V2
+        self._test_classes = OrderedDict()
+        train_kwargs = _env_dict.MT2_V2_ARGS_KWARGS
+        self._train_tasks = _make_tasks(self._train_classes, train_kwargs,
+                                        _MT_OVERRIDE,
+                                        seed=seed)
+        self._test_tasks = []
 
 class MT10(Benchmark):
     def __init__(self, seed=None):
@@ -212,4 +223,4 @@ class MT50(Benchmark):
                                         seed=seed)
         self._test_tasks = []
 
-__all__ = ["ML1", "MT1", "ML10", "MT10", "ML45", "MT50"]
+__all__ = ["ML1", "MT1", "MT2", "ML10", "MT10", "ML45", "MT50"]

@@ -136,6 +136,8 @@ class MujocoEnv(gym.Env, abc.ABC):
         if self.viewer is not None:
             glfw.destroy_window(self.viewer.window)
             self.viewer = None
+            self._viewers = {}
+            
 
     def _get_viewer(self, mode):
         self.viewer = self._viewers.get(mode)

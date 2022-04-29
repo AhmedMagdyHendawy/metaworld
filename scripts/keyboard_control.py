@@ -8,7 +8,7 @@ import sys
 
 import numpy as np
 
-from metaworld.envs.mujoco.sawyer_xyz import SawyerPickPlaceEnvV2
+from metaworld.envs.mujoco.sawyer_xyz.v2 import SawyerPickPlaceEnvV2
 
 
 
