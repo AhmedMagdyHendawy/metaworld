@@ -372,7 +372,15 @@ MT2_V2_ARGS_KWARGS = {
               kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
     for key, _ in MT2_V2.items()
 }
+# ahmed 
+MT3_V2 = OrderedDict(
+    (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2)), )
 
+MT3_V2_ARGS_KWARGS = {
+    key: dict(args=[],
+              kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
+    for key, _ in MT3_V2.items()
+}
 MT10_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2),
      ('pick-place-v2', SawyerPickPlaceEnvV2),
