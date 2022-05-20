@@ -200,6 +200,17 @@ class MT2(Benchmark):
                                         seed=seed)
         self._test_tasks = []
 
+class MT3(Benchmark):
+    def __init__(self, seed=None):
+        super().__init__()
+        self._train_classes = _env_dict.MT3_V2
+        self._test_classes = OrderedDict()
+        train_kwargs = _env_dict.MT3_V2_ARGS_KWARGS
+        self._train_tasks = _make_tasks(self._train_classes, train_kwargs,
+                                        _MT_OVERRIDE,
+                                        seed=seed)
+        self._test_tasks = []
+
 class MT10(Benchmark):
     def __init__(self, seed=None):
         super().__init__()
