@@ -384,7 +384,7 @@ MTB2_V2_ARGS_KWARGS = {
 
 # ahmed 
 MT3_V2 = OrderedDict(
-    (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2)), )
+    (('reach-v2', SawyerReachEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2), ('push-v2', SawyerPushEnvV2)), )
 
 MT3_V2_ARGS_KWARGS = {
     key: dict(args=[],
