@@ -363,6 +363,7 @@ for key, env_cls in HARD_MODE_CLS_DICT['test'].items():
     HARD_MODE_ARGS_KWARGS['test'][key] = _hard_mode_args_kwargs(env_cls, key)
 
 ############################## V2 DICTS ##############################
+#------------------------------ MT2 ---------------------#
 # ahmed 
 MT2_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2)), )
@@ -372,7 +373,7 @@ MT2_V2_ARGS_KWARGS = {
               kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
     for key, _ in MT2_V2.items()
 }
-
+#------------------------------ MTB2 ---------------------#
 MTB2_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2)), )
 
@@ -381,7 +382,7 @@ MTB2_V2_ARGS_KWARGS = {
               kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
     for key, _ in MTB2_V2.items()
 }
-
+#------------------------------ MT3 ---------------------#
 # ahmed 
 MT3_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2), ('push-v2', SawyerPushEnvV2)), )
@@ -391,6 +392,16 @@ MT3_V2_ARGS_KWARGS = {
               kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
     for key, _ in MT3_V2.items()
 }
+#------------------------------ MTB3 ---------------------#
+MTB3_V2 = OrderedDict(
+    (('reach-v2', SawyerReachEnvV2), ('drawer-close-v2', SawyerDrawerCloseEnvV2), ('drawer-open-v2', SawyerDrawerOpenEnvV2)), )
+
+MTB3_V2_ARGS_KWARGS = {
+    key: dict(args=[],
+              kwargs={'task_id': list(ALL_V2_ENVIRONMENTS.keys()).index(key)})
+    for key, _ in MTB3_V2.items()
+}
+#------------------------------ MT10 ---------------------#
 MT10_V2 = OrderedDict(
     (('reach-v2', SawyerReachEnvV2), ('push-v2', SawyerPushEnvV2),
      ('pick-place-v2', SawyerPickPlaceEnvV2),
